@@ -259,8 +259,8 @@ class NfcReader {
             }
 
             // Create application, change key and authenticate
-            await this.card.createApplication(0x1984, this.card.constants.keySettings.factoryDefault, 1, this.card.constants.keyType.AES);
-            await this.card.selectApplication(0x1984);
+            await this.card.createApplication(0x0591, this.card.constants.keySettings.factoryDefault, 1, this.card.constants.keyType.AES);
+            await this.card.selectApplication(0x0591);
             await this.card.ev1AuthenticateAes(0, this.card.default_aes_key);
             await this.card.changeKeyAes(42, 0, key);
             await this.card.ev1AuthenticateAes(0, key);
